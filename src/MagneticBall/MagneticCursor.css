@@ -1,0 +1,21 @@
+.cursor-ball {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(233, 233, 233, 0.7); /* purple theme */
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, background 0.2s, transform 5s;
+}
+
+/* Magnetic effect when hovering on links or buttons */
+a:hover ~ .cursor-ball,
+button:hover ~ .cursor-ball {
+  width: 40px;
+  height: 40px;
+  background: rgba(168, 85, 247, 0.3);
+}

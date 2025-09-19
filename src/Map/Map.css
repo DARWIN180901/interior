@@ -1,0 +1,22 @@
+.fade-in-section {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 2s ease, filter 2s ease;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  filter: blur(0);
+}
+.map-container {
+  width: 100%;
+  height: 75vh; /* responsive height based on viewport */
+  max-height: 700px; /* prevents it from getting too tall */
+  min-height: 350px; /* ensures it isn’t too small */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  text-align: center;
+  
+}

@@ -1,0 +1,157 @@
+
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center; /* center vertically if needed */
+  text-align: center;
+  position: relative;
+  padding: 80px 20px;
+background: transparent;
+    overflow-x: hidden;
+  }
+
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 2rem;
+}
+
+.carousel-slide {
+   flex: 1;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  animation: slideIn 0.8s ease forwards;
+  max-width: 900px;
+  height: 250px;
+  pointer-events: auto;
+ 
+  margin-left: 80px;
+}
+
+.quote {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  margin: 0.5rem 0;
+  color: white;
+  
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* Slide animation for carousel */
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .quote {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .carousel-slide {
+    padding: 1.5rem 2rem;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote {
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .carousel-slide {
+    padding: 1rem 1.5rem;
+  }
+}
+
+.carousel-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideIn 1.2s ease-out forwards;
+  opacity: 0;
+}
+.carousel-image img {
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.carousel-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* center buttons horizontally */
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6b5b95, #b8a9c9);
+  color: white;
+  box-shadow: 0 10px 20px rgba(107, 91, 149, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(107, 91, 149, 0.5);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,86 @@
+.about-section {
+  width: 100%;
+margin-top: 100vh;
+  padding: 80px 40px;
+  background: transparent;
+  display: flex;
+  flex-direction: column; /* heading on top */
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  overflow-x: hidden;
+  /* margin-top: 100vh; ❌ remove this */
+}
+
+
+.about-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.about-heading h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* New flex container for video + text */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap; /* responsive */
+  width: 100%;
+  max-width: 1200px;
+}
+
+.video-container video {
+  width: 500px;
+  height: 500px;
+  max-width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+/* Content */
+.content-container {
+  max-width: 500px;
+}
+
+/* Hidden state */
+.video-container,
+.content-container {
+  opacity: 0;
+  transition: all 2s ease-out;
+}
+
+/* Off-screen initial */
+.video-container {
+  transform: translateX(-300px);
+}
+
+.content-container {
+  transform: translateX(300px);
+}
+
+/* Visible state */
+.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.content-container p {
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
