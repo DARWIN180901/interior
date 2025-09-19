@@ -38,7 +38,7 @@ export default function Navbar() {
           
           {/* Logo with gradient animation */}
           <div className="logo-wrapper">
-            <h1 className="logo">DESIGNALCHEMY</h1>
+            <h1 className="logo">UrbanNest</h1>
             <div className="logo-glow" />
           </div>
 

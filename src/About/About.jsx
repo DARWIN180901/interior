@@ -31,7 +31,7 @@ export default function About() {
   return (
     <section ref={aboutRef} className="about-section" id="about">
       <div className="about-heading">
-        <h2>Our Services</h2>
+        <h2>About Us</h2>
       </div>
 
       <div className="about-content">
