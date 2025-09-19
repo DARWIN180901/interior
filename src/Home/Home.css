@@ -5,7 +5,7 @@
   flex-direction: column;
   
   justify-content: center; /* center vertically if needed */
-  text-align: center;
+  margin-top: 5rem;
   position: relative;
   padding: 80px 20px;
 background: transparent;
@@ -19,6 +19,7 @@ background: transparent;
   justify-content: space-between;
   width: 80%;
   margin-top: 2rem;
+   height: 250px;
 }
 
 .carousel-slide {
@@ -27,7 +28,7 @@ background: transparent;
   border-radius: 12px;
   animation: slideIn 0.8s ease forwards;
   max-width: 900px;
-  height: 250px;
+  height: 400px;
   pointer-events: auto;
  
   margin-left: 80px;
@@ -81,19 +82,7 @@ background: transparent;
   }
 }
 
-.carousel-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: slideIn 1.2s ease-out forwards;
-  opacity: 0;
-}
-.carousel-image img {
-  max-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
+
 
 @keyframes slideIn {
   from {
@@ -109,12 +98,14 @@ background: transparent;
 .carousel-buttons {
   display: flex;
   gap: 20px;
-  justify-content: center; /* center buttons horizontally */
+ /* center buttons horizontally */
   margin-top: 40px;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s forwards;
   animation-delay: 0.5s;
+  padding-left:  120px;
+  
 }
 
 .btn-primary, .btn-secondary {
